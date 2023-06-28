@@ -10,3 +10,38 @@
 // R0 >= 0, R1 >= 0, and R0*R1 < 32768.
 
 // Put your code here.
+//i = 1
+@i
+M = 1
+//pdt = 0
+@pdt
+M = 0
+
+(LOOP)
+// R1 iterations
+//
+    @i
+    D = M
+    @R1
+    D = D - M
+    @STOP
+    D ; JGT
+    @R0
+    D = M
+    @pdt
+    M = M + D
+    @i
+    M = M+1
+    @LOOP
+    0;JMP
+
+(STOP)
+    @pdt
+    D = M
+    @R2
+    M = D
+
+(END)
+    @END
+    0 ; JMP
+

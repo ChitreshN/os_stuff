@@ -39,7 +39,7 @@
     0;JMP
 (STOP)
 @j
-M = 0
+M = 1
 @SCREEN
 D = A
 @curword
